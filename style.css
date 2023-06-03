@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 85vw;
+  margin: 1rem auto;
+}
+
+.single-item,
+.content {
+  text-align: center;
+}
+
+img,
+.content {
+  transition: 0.7s all;
+  border-radius: 3px;
+}
+
+.single-item {
+  position: relative;
+  margin: 0.5%;
+  max-width: 31%;
+  float: left;
+}
+
+.single-item img {
+  width: 100%;
+  margin-bottom: -4px;
+}
+
+.single-item .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  opacity: 0;
+}
+
+.single-item .content h2 {
+  padding-top: 35%;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 40px;
+}
+
+.single-item .content p {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.single-item:hover .content {
+  opacity: 1;
+}
+
+.single-item:hover img{
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+}
+
+@media screen and (max-width: 1150px) {
+    .single-item{
+        max-width: 48%;
+        margin: 1%;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .single-item{
+        float: none;
+        max-width: 80%;
+        margin: 1% auto;
+    }
+    
+}
